@@ -30,7 +30,7 @@ if __name__ == "__main__":
     logger.info(args)
 
     logger.info(f"***** Loading Model: {args.checkpoint} *****")
-    vdr = Retriever.from_pretrained(args.checkpoint, force_download=True)
+    vdr = Retriever.from_pretrained(args.checkpoint)
     vdr = vdr.to(args.device)
 
     logger.info(f"***** Loading Query: {args.query_file} *****")
